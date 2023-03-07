@@ -5,7 +5,7 @@ const prevButton = document.querySelector('.carousel_button--left');
 
 
 async function get_char(char_index){
-    const response = await fetch('char.json');
+    const response = await fetch('char.json', {mode:"cors"});
     const data =await response.json();
     console.log(data[char_index]);
     const {name,title, vision, weapon, gender, nation, affiliation, rarity, constellation, description} = data[char_index];
